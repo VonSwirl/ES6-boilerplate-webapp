@@ -1,0 +1,14 @@
+{
+    "extends": [
+        "standard",
+        "plugin:security/recommended"
+    ],
+    "plugins": ["security"],
+    "env": {
+        "node": true,
+        "mongo": true,
+        "es6": true,
+        "commonjs": true,
+        "browser": true
+    }
+}
