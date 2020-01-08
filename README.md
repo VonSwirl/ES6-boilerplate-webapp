@@ -1,29 +1,30 @@
-# es6-node-barebone-boilerplate
+# Quick ES6 + NodeJS + ExpressJS + PUG + MVC + 
 
-Create New `.env` file in root
-add the following value:
+## Follow Steps Below
 
-`LOCAL_DIRNAME=`
+1. Create New `.env` file in root
+Add these values to it:
 
-`PORT=3000`
-
-`NODE_ENV='development'` 
-
-
-Run Cmd
-
-`npm i`
+      | Values                 | 
+      | -------------          |
+      | LOCAL_DIRNAME=         |
+      | PORT=3000              |
+      | NODE_ENV='development' |
 
 
-DEV:
-
-`npm restart`
-(Runs Command: `nodemon --exec babel-node app.js`)
-
-PROD:
 
 
-`npm start`
-(Runs Command: `babel-node app.js`)
 
-"test": "nodemon --exec babel-node app.js"
+2. Run Cmd
+
+      `npm i`
+
+
+
+
+## When Complete Run Cmd To Launch
+
+
+  `nodemon --exec babel-node app.js`
+
+
