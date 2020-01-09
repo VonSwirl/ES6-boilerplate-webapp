@@ -1,5 +1,7 @@
-NPM Package Scanned by Snyk
+This Repo is monitored by Snyk
+
 [![Known Vulnerabilities](https://snyk.io/package/npm/snyk/badge.svg)](https://snyk.io/package/npm/snyk)
+
 # ES6 Boilerplate Web Application
 
 This repo is intended to minimise the time spent on creating a NodeJS Web App from scratch.
