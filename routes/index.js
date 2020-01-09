@@ -15,7 +15,13 @@ indexRouter.get('/', cors(corsOptions), (req, res) => {
 */
 
 indexRouter.get('/', (req, res) => {
-  return res.sendStatus(404)
+  console.log('Homepage')
+  return res.render('homepage.pug')
+})
+
+indexRouter.get('/privacy-policy', (req, res) => {
+  console.log('Privacy')
+  return res.render('privacy-policy.pug')
 })
 
 export default indexRouter
