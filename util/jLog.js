@@ -1,4 +1,3 @@
-/* eslint-disable security/detect-object-injection */
 'use-strict'
 const spacer = ' >>>\n'
 const srtUndef = '>>> JLOG (Undefined) '
