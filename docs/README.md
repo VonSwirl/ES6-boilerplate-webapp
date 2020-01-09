@@ -1,3 +1,4 @@
+NPM Package Scanned by Snyk
 [![Known Vulnerabilities](https://snyk.io/package/npm/snyk/badge.svg)](https://snyk.io/package/npm/snyk)
 # ES6/NodeJS/ExpressJS/PUG/MVC Boilerplate Web-App 
 
