@@ -1,15 +1,15 @@
-# Quick ES6 + NodeJS + ExpressJS + PUG + MVC + 
+# ES6/NodeJS/ExpressJS/PUG/MVC Boilerplate Web-App 
 
 ## Follow Steps Below
 
-1. Create New `.env` file in root
-Add these values to it:
+  1. Create New `.env` file in root
+  Add these values to it:
 
-      | Values                 | 
-      | -------------          |
-      | LOCAL_DIRNAME=         |
-      | PORT=3000              |
-      | NODE_ENV='development' |
+        | Values                 | 
+        | -------------          |
+        | LOCAL_DIRNAME=         |
+        | PORT=3000              |
+        | NODE_ENV='development' |
 
 
 
