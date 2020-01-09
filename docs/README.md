@@ -1,4 +1,4 @@
-This Repo is monitored by Snyk
+This Repo is monitored by [Snyk](https://snyk.io/package/npm/snyk)
 
 [![Known Vulnerabilities](https://snyk.io/package/npm/snyk/badge.svg)](https://snyk.io/package/npm/snyk)
 
