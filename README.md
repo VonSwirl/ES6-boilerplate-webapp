@@ -1,30 +1,27 @@
 # ES6/NodeJS/ExpressJS/PUG/MVC Boilerplate Web-App 
 
-## Follow Steps Below
+## Installation
 
-  1. Create New `.env` file in root
-  Add these values to it:
+  1. Create New `.env` file in root DIR & copy and pastes the values listed below:
 
         | Values                 | 
         | -------------          |
         | LOCAL_DIRNAME=         |
         | PORT=3000              |
         | NODE_ENV='development' |
+        | DB_STAGING=            |
+        | DB_PRODUCTION=         |
+        | DB_DEVELOPMENT=        |
+        |                        |
+
+  2. Run:
+  ## 
+    npm i
+----
+
+## Launch in Dev Env:
+    nodemon --exec babel-node app.js
 
 
-
-
-
-2. Run Cmd
-
-      `npm i`
-
-
-
-
-## When Complete Run Cmd To Launch
-
-
-  `nodemon --exec babel-node app.js`
-
-
+## Launch in Prod Env: 
+    npm start
