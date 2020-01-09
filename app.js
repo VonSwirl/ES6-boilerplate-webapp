@@ -10,7 +10,7 @@ import indexRouter from './routes/index'
 dotenv.config() // Initialize DotEnv to read .env variable
 const now = new Date() // For Logging
 const spacer = '______________________________________________________________' // For Logging
-const portNumber = (process.env.PORT || 2222)
+const portNumber = (process.env.PORT || 3000)
 
 process.env.LOCAL_DIRNAME = __dirname
 
