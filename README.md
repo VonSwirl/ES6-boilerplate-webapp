@@ -7,7 +7,7 @@
         | Values                 | 
         | -------------          |
         | LOCAL_DIRNAME=         |
-        | PORT=3000              |
+        | PORT=                  |
         | NODE_ENV='development' |
         | DB_STAGING=            |
         | DB_PRODUCTION=         |
