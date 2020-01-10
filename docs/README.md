@@ -25,7 +25,6 @@ Ive really benefitted from the open-source community so here's a contribution to
   * [Pug](https://github.com/pugjs/pug) - Pug is a robust, elegant, feature rich template engine for Node.js.
 
 
-One Paragraph of project description goes here
 
 ## Getting Started
 
@@ -34,8 +33,10 @@ These instructions will get you a copy of the project up and running on your loc
 ## Prerequisites
 
 Installed on your machine:
-npm v6^
-node v10^
+
+`npm v6^`
+
+`node v10^`
 
 ## Installing
 
