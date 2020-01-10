@@ -1,16 +1,263 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<!-- HTML Head-->
 
 <head>
+  <title>ES6 Boilerplate</title><!-- Standard Meta-->
+  <!-- Add URL to delpoyed version in contentmeta(name="url" content="")-->
   <meta charset="utf-8">
-
-  <title>ES6 Boilerplate</title>
-  <meta name="description" content="The HTML5 Herald">
-  <meta name="author" content="SitePoint">
-</head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="../public/images/favicons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#204d74">
+  <meta name="application-name" content="ES6 Boilerplate">
+  <meta name="description" content="ES6 Boilerplate WebApp Visit: https://github.com/VonSwirl/ES6-boilerplate-webapp">
+  <!-- Open Graph Meta-->
+  <!-- Add URL to delpoyed version in contentmeta(property='og:url' content='')-->
+  <meta property="og:title" content="ES6 Boilerplate">
+  <meta property="og:description"
+    content="ES6 Boilerplate WebApp Visit: https://github.com/VonSwirl/ES6-boilerplate-webapp">
+  <meta property="og:image:type" content="image/jpg">
+  <meta property="og:image:secure_url" content="../public/images/favicons/apple-icon-180x180.png">
+  <meta property="og:image:width" content="615">
+  <meta property="og:image:height" content="398">
+  <meta property="og:locale" content="en_GB"><!-- Twitter Card-->
+  <meta name="twitter:title" content="ES6 Boilerplate">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:description"
+    content="ES6 Boilerplate WebApp Visit: https://github.com/VonSwirl/ES6-boilerplate-webapp">
+  <!-- REMOVE COMMENT WHEN CORRECT CONTENT ADDEDmeta(name="twitter:site" content="@<ADD INFO>")
+  meta(name="twitter:creator" content="@<ADD INFO>")
+  meta(name="twitter:image" content='../public/images/rich-preview-summary.jpg')
+  meta(name="twitter:image:alt" content='<ADD DESCRIPTION>')
+  -->
+  <!-- Links-->
+  <!-- ADD PRECONNECTS HERE e.glink(rel="preconnect" href='https://use.fontawesome.com/')-->
+  <link rel="manifest" href="../public/manifest.json">
+  <link rel="apple-touch-icon" sizes="57x57" href="../public/images/favicons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../public/images/favicons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../public/images/favicons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../public/images/favicons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../public/images/favicons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../public/images/favicons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../public/images/favicons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../public/images/favicons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../public/images/favicons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../public/images/favicons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../public/images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../public/images/favicons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../public/images/favicons/favicon-16x16.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="../public/styles/main.css"><!-- No Script Statement--><noscript>
+    <hr>
+    <h3>Just So You Know...
+      <p>Your browser and/or connection is blocking scripts which are an essential component of our website to deliver
+        you a great customer experience.</p>
+      <br>
+      <p>We highly recommend Google Chrome as a web browser. See here: <a href='https://www.google.com/chrome/'>Get
+          Google Chrome!</a></p>
+      <br>
+      <p>If you are connected to a work or public network, this may be restricting your browsing experience.</p>
+      <br>
+      <p>Please use a browser that supports our website, or connect to a network that is not restricting connection to
+        the internet</p>
+      <br>
+      <p>We look forward to you revisiting us again :)</p>
+      <hr>
+  </noscript>
+</head><!-- HTML Body-->
 
 <body>
-  <h1>Hi</h1>
-</body>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark"><a class="navbar-brand" href="#">Navbar</a><button
+      class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation"><span
+        class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active"><a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+        <li class="nav-item"><a class="nav-link disabled" href="#">Disabled</a></li>
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="dropdown01" href="http://example.com"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown01"><a class="dropdown-item" href="#">Action</a><a
+              class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0"><input class="form-control mr-sm-2" type="text" placeholder="Search"
+          aria-label="Search"><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button></form>
+    </div>
+  </nav>
+  <main role="main">
+    <!-- Main jumbotron for a primary marketing message or call to action-->
+    <div class="jumbotron">
+      <div class="container"><br><br>
+        <h1 class="display-3">ES6 Boilerplate Web Application</h1><br><a class="btn btn-primary btn-lg"
+          href="https://github.com/VonSwirl/ES6-boilerplate-webapp" target="blank" role="button">View GitHub »</a>
+      </div>
+    </div>
+    <div class="container">
+      <!-- Example row of columns-->
+      <div class="row" style="display: inline">
+        <p style="padding-right: 5px">Package security monitored by <a style="padding-right: 5px"
+            href="https://snyk.io/package/npm/snyk">Snyk<img style="padding-left: 5px"
+              src="https://snyk.io/package/npm/snyk/badge.svg" alt="Known Vulnerabilities"></a></p>
+        <p>This repo is intended to minimise the time spent on creating a NodeJS Web App from scratch.</p>
+        <p>All you need to do is create the .env file and populate it with your own secrets and your ready to go.</p>
+        <p>Ive really benefitted from the open-source community so here's a contribution to hopefully help others.</p>
+      </div>
+      <div class="container">
+        <hr>
+        <h2>Built With</h2>
+        <ul>
+          <li><a target="blank" href="https://nodejs.org/en/">NodeJS</a> - Node.js® is a JavaScript runtime built on
+            Chrome's V8 JavaScript engine.</li>
+          <li><a target="blank" href="https://www.npmjs.com/">NPM </a> - Relied upon by more than 11 million developers
+            worldwide!</li>
+          <li><a target="blank" href="https://developer.chrome.com/apps/app_frameworks">MVC </a> - The
+            Model-View-Controller (MVC) is an architectural pattern.</li>
+          <li><a href="https://www.npmjs.com/package/express">ExpressJS </a> - Fast, unopinionated, minimalist web
+            framework for node.</li>
+          <li><a target="blank" href="https://www.npmjs.com/package/mongoose">Mongoose </a> - Mongoose is a MongoDB
+            object modeling tool.</li>
+          <li><a target="blank" href="https://www.npmjs.com/package/helmet">HelmetJS </a> - Helmet helps you secure your
+            Express apps.</li>
+          <li><a target="blank" href="https://www.npmjs.com/package/body-parser">Body-Parser </a> - Parse incoming
+            request bodies vailable under the req.body property.</li>
+          <li><a target="blank" href="https://www.npmjs.com/package/cookie-session">Cookie-Session </a> - A user session
+            can be stored on the server or on the client.</li>
+          <li><a target="blank" href="https://www.npmjs.com/package/compression">Compression </a> - Compression
+            decreases amount of data that’s served to users.</li>
+          <li><a target="blank" href="https://www.npmjs.com/package/dotenv">Dotenv </a> - Loads environment variables
+            from .env for nodejs projects.</li>
+          <li><a target="blank" href="https://www.npmjs.com/package/csurf">Csurf </a> - Node.js CSRF protection
+            middleware.</li>
+          <li><a target="blank" href="https://github.com/pugjs/pug">Pug </a> - Pug is a robust, elegant, feature rich
+            template engine for Node.js.</li>
+          <li><a target="blank" href="https://getbootstrap.com">Bootstrap4 </a> - The world’s most popular framework for
+            building responsive, mobile-first websites.</li>
+        </ul>
+      </div><!-- Getting Started-->
+      <div class="container">
+        <hr>
+        <h2>Getting Started</h2>
+        <p>These instructions will get you a copy of the project up and running on your local machine for development
+          and testing purposes.</p>
+        <hr>
+        <h2>Prerequisites </h2>
+        <p>Installed on your machine:</p>
+        <ul>
+          <li><code>npm v6^</code></li>
+          <li><code>node v10^</code></li>
+        </ul>
+        <hr>
+        <h2>Installing</h2>
+        <ul>
+          <li>
+            <p>Create New <code>.env</code> file in root DIR and copy and pastes the values listed below:</p>
+            <table style="width:100%">
+              <tbody>
+                <tr>
+                  <th>VALUES:</th>
+                </tr>
+                <tr>
+                  <td>LOCAL_DIRNAME=</td>
+                </tr>
+                <tr>
+                  <td>PORT=</td>
+                </tr>
+                <tr>
+                  <td>NODE_ENV='development'</td>
+                </tr>
+                <tr>
+                  <td>CK_1=(See **)</td>
+                </tr>
+                <tr>
+                  <td>CK_2=</td>
+                </tr>
+                <tr>
+                  <td>CK_3=</td>
+                </tr>
+                <tr>
+                  <td>CK_4=</td>
+                </tr>
+                <tr>
+                  <td>CK_5=</td>
+                </tr>
+                <tr>
+                  <td>CK_6=</td>
+                </tr>
+                <tr>
+                  <td>CK_7=</td>
+                </tr>
+                <tr>
+                  <td>CK_8=</td>
+                </tr>
+                <tr>
+                  <td>CK_9=</td>
+                </tr>
+                <tr>
+                  <td>CK_10=</td>
+                </tr>
+                <tr>
+                  <td>CK_11=</td>
+                </tr>
+                <tr>
+                  <td>CK_12=</td>
+                </tr>
+                <tr>
+                  <td>DB_DEVELOPMENT=</td>
+                </tr>
+                <tr>
+                  <td>DB_STAGING=mongodb://username:pwd@example.com:ADD-Port/ADD-DB-Name</td>
+                </tr>
+                <tr>
+                  <td>DB_PRODUCTION=</td>
+                </tr>
+              </tbody>
+            </table><br>
+            <p><i>** Add your own random keys for example <code>i6qphjQY>xmpaqhhjamgo|ike@x</code></i></p><br>
+          <li>
+            <p>Then Run Command:</p><code>npm i</code>
+          </li>
+          </li>
+        </ul>
+        <hr>
+        <h2>Running</h2>
+        <p>In Dev Env run command:</p>
+        <ul>
+          <li><code>nodemon --exec babel-node app.js</code></li>
+        </ul>
+        <p>In Prod Env run command:<ul>
+            <li><code>npm start</code></li>
+          </ul>
+        </p>
+        <hr>
+        <h2>Author</h2>
+        <ul>
+          <li>Jerome Hurley</li>
+        </ul>
+        <hr>
+        <h2>License</h2>
+        <p>This project is licensed under the MIT License - see the <a target="blank"
+            href="https://github.com/VonSwirl/ES6-boilerplate-webapp/blob/master/docs/LICENSE.md">LICENSE.md</a> file
+          for details</p>
+      </div>
+    </div>
+  </main>
+  <hr>
+  <footer class="container">
+    <p>Created By: Jerome Hurley</p>
+  </footer>
+</body><!-- Scripts-->
+<!-- GDPR Banner-->
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js?forceLang=en&amp;theme=grey&amp;thirdparty=1&amp;always=1&amp;refreshPage=1&amp;showNoConsent=1&amp;showPolicyLink=1&amp;remember=English&amp;privacyPage=privacy-policy"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
 
 </html>
