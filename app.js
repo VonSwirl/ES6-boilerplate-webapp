@@ -144,7 +144,6 @@ process.on('unhandledRejection', (e, promise) => {
 startServer().finally(() => {
   console.log(`
 
-
 >>>>>>>>>>>>>>>>>>>>> APP Started >>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
             ES6 SETUP SUPPORT AVAILABLE HERE
@@ -161,6 +160,10 @@ ${spacer}\n
 ${spacer}\n 
  Env: ${process.env.NODE_ENV}
 ${spacer}\n
+ Console Commands:
+    * Close Server: Ctrl+c
+    * Restart Server: rs (May need to enter this twice)
+${spacer}\n
 >>>>>>>>>>>>>>>>>>>> Server Running >>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -173,16 +176,22 @@ ${spacer}\n
  * * Logs any errors
  */
 async function startServer () {
+  const dbURL = config.configURL(process.env.NODE_ENV)
   console.log('\n\nConnecting to DB....Please Wait\n')
-  // DEBUG console.log(config.configURL(process.env.NODE_ENV)) // Check the connection string
-  await db.connect(config.configURL(process.env.NODE_ENV), { useNewUrlParser: true })
-    .then(() => {
-      connectionResult = 'DB Conn: Successful'
-      return app.listen(portNumber).on('error', async (e) => jLog('app.listen() Error', e))
-    })
-    .catch((e) => {
-      jLog('Failed To Connect To DB', { ConnectionError: e.reason })
-      connectionResult = 'DB Conn: FAILED!! See Error Above'
-      return app.listen(portNumber).on('error', async (e) => jLog('app.listen() Error', e))
-    })
+  // Check if DB Url connection string is valid
+  if (!dbURL || dbURL === '' || dbURL === undefined) {
+    connectionResult = 'DB Connection Status: Connection URL not provided'
+    return app.listen(portNumber).on('error', async (e) => jLog('app.listen() Error', e))
+  } else {
+    await db.connect(dbURL, { useNewUrlParser: true })
+      .then(() => {
+        connectionResult = 'DB Connection Status: Successful'
+        return app.listen(portNumber).on('error', async (e) => jLog('app.listen() Error', e))
+      })
+      .catch((e) => {
+        jLog('Failed To Connect To DB', { ConnectionError: e.reason })
+        connectionResult = 'DB Connection Status: FAILED (See above)'
+        return app.listen(portNumber).on('error', async (e) => jLog('app.listen() Error', e))
+      })
+  }
 }
