@@ -1,63 +1,152 @@
 extends layout.pug
 block content
   body
-    // Navigation
-    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.fixed-top
+    include nav
+    main(role='main')
+      // Main jumbotron for a primary marketing message or call to action
+      .jumbotron
+        .container
+          br
+          br
+          h1.display-3 ES6 Boilerplate Web Application
+          br
+          a.btn.btn-primary.btn-lg(href='https://github.com/VonSwirl/ES6-boilerplate-webapp' target='blank' role='button') View GitHub »
       .container
-        a.navbar-brand(href='#') Start Bootstrap
-        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
-          span.navbar-toggler-icon
-        #navbarResponsive.collapse.navbar-collapse
-          ul.navbar-nav.ml-auto
-            li.nav-item.active
-              a.nav-link(href='#')
-                | Home
-                span.sr-only (current)
-            li.nav-item
-              a.nav-link(href='#') About
-            li.nav-item
-              a.nav-link(href='#') Services
-            li.nav-item
-              a.nav-link(href='#') Contact
-    // Page Content
-    .container
-      .row.align-items-center.my-5
-        .col-lg-7
-          img.img-fluid.rounded.mb-4.mb-lg-0(src='http://placehold.it/900x400', alt='')
-        .col-lg-5
-          h1.font-weight-light Business Name or Tagline
-          p
-            | This is a template that is great for small businesses. It doesn't have too much fancy flare to it, but it makes a great use of the standard Bootstrap core components. Feel free to use this template for any project you want!
-          a.btn.btn-primary(href='#') Call to Action!
-
-        .card.text-white.bg-secondary.my-5.py-4.text-center
-          .card-body
-            p.text-white.m-0
-              | This call to action card is a great place to showcase some important information or display a clever tagline!
-        .row
-          .col-md-4.mb-5
-            .card.h-100
-              .card-body
-                h2.card-title Card One
-                p.card-text
-                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.
-              .card-footer
-                a.btn.btn-primary.btn-sm(href='#') More Info
-          .col-md-4.mb-5
-            .card.h-100
-              .card-body
-                h2.card-title Card Two
-                p.card-text
-                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex natus at dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi labore.
-              .card-footer
-                a.btn.btn-primary.btn-sm(href='#') More Info
-          .col-md-4.mb-5
-            .card.h-100
-              .card-body
-                h2.card-title Card Three
-                p.card-text
-                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.
-              .card-footer
-                a.btn.btn-primary.btn-sm(href='#') More Info
-  block foot
-    include footer
+        // Example row of columns
+        .row(style='display: inline')
+          p(style='padding-right: 5px') Package security monitored by  
+            a(style='padding-right: 5px' href='https://snyk.io/package/npm/snyk') Snyk
+              img(style='padding-left: 5px' src='https://snyk.io/package/npm/snyk/badge.svg', alt='Known Vulnerabilities')
+          p This repo is intended to minimise the time spent on creating a NodeJS Web App from scratch.
+          p All you need to do is create the .env file and populate it with your own secrets and your ready to go.
+          p Ive really benefitted from the open-source community so here's a contribution to hopefully help others.
+        .container
+          hr
+          h2 Built With
+          ul
+            li
+              a(target='blank' href='https://nodejs.org/en/') NodeJS
+              |  - Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.
+            li
+              a(target='blank' href='https://www.npmjs.com/') NPM 
+              |  - Relied upon by more than 11 million developers worldwide!
+            li
+              a(target='blank' href='https://developer.chrome.com/apps/app_frameworks') MVC 
+              |  - The Model-View-Controller (MVC) is an architectural pattern.
+            li
+              a(href='https://www.npmjs.com/package/express') ExpressJS 
+              |  - Fast, unopinionated, minimalist web framework for node.
+            li
+              a(target='blank' href='https://www.npmjs.com/package/mongoose') Mongoose 
+              |  - Mongoose is a MongoDB object modeling tool.
+            li
+              a(target='blank' href='https://www.npmjs.com/package/helmet') HelmetJS 
+              |  - Helmet helps you secure your Express apps.
+            li
+              a(target='blank' href='https://www.npmjs.com/package/body-parser') Body-Parser 
+              |  - Parse incoming request bodies vailable under the req.body property.
+            li
+              a(target='blank' href='https://www.npmjs.com/package/cookie-session') Cookie-Session 
+              |  - A user session can be stored on the server or on the client.
+            li
+              a(target='blank' href='https://www.npmjs.com/package/compression') Compression 
+              |  - Compression decreases amount of data that’s served to users.
+            li
+              a(target='blank' href='https://www.npmjs.com/package/dotenv') Dotenv 
+              |  - Loads environment variables from .env for nodejs projects.
+            li
+              a(target='blank' href='https://www.npmjs.com/package/csurf') Csurf 
+              |  - Node.js CSRF protection middleware.
+            li
+              a(target='blank' href='https://github.com/pugjs/pug') Pug 
+              |  - Pug is a robust, elegant, feature rich template engine for Node.js.
+            li
+              a(target='blank' href='https://getbootstrap.com') Bootstrap4 
+              |  - The world’s most popular framework for building responsive, mobile-first websites.
+        // Getting Started
+        .container
+          hr
+          h2 Getting Started
+          p These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+          hr
+          h2 Prerequisites 
+          p Installed on your machine:
+          ul
+            li
+              code npm v6^
+            li
+              code node v10^
+          hr
+          h2 Installing
+          ul
+            li
+              p Create New <code>.env</code> file in root DIR and copy and pastes the values listed below:
+              table(style='width:100%')
+                tbody
+                  tr
+                    th VALUES:
+                  tr
+                    td LOCAL_DIRNAME=
+                  tr
+                    td PORT=
+                  tr
+                    td NODE_ENV='development'
+                  tr
+                    td CK_1=(See **)
+                  tr
+                    td CK_2=
+                  tr
+                    td CK_3=
+                  tr
+                    td CK_4=
+                  tr
+                    td CK_5=
+                  tr
+                    td CK_6=
+                  tr
+                    td CK_7=
+                  tr
+                    td CK_8=
+                  tr
+                    td CK_9=
+                  tr
+                    td CK_10=
+                  tr
+                    td CK_11=
+                  tr
+                    td CK_12=
+                  tr
+                    td DB_DEVELOPMENT=
+                  tr
+                    td DB_STAGING=mongodb://username:pwd@example.com:ADD-Port/ADD-DB-Name
+                  tr
+                    td DB_PRODUCTION=
+              br
+              p
+                i ** Add your own random keys for example <code>i6qphjQY>xmpaqhhjamgo|ike@x</code>
+              br
+              li
+                p Then Run Command:
+                code npm i
+          hr
+          h2 Running
+          p In Dev Env run command:
+          ul
+            li
+              code nodemon --exec babel-node app.js
+          p In Prod Env run command:
+            ul
+              li
+                code npm start
+          hr
+          h2 Author
+          ul
+            li Jerome Hurley
+          hr
+          h2 License
+          p This project is licensed under the MIT License - see the 
+              a(target='blank' href='https://github.com/VonSwirl/ES6-boilerplate-webapp/blob/master/docs/LICENSE.md') LICENSE.md
+              |  file for details
+    hr
+    block foot
+      include footer
