@@ -4,6 +4,8 @@ This Repo is monitored by [Snyk](https://snyk.io/package/npm/snyk)
 
 # ES6 Boilerplate Web Application
 
+## [Live Demo](https://es6-boilerplate.herokuapp.com/)
+
 This repo is intended to minimise the time spent on creating a NodeJS Web App from scratch.
 
 All you need to do is create the .env file and populate it with your own secrets and your ready to go.

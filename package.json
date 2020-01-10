@@ -15,6 +15,9 @@
     "start": "babel-node app.js",
     "test": "snyk test"
   },
+  "engines": {
+    "node": "10.x"
+  },
   "author": "Jerome Hurley",
   "license": "GPL-2.0-or-later",
   "dependencies": {
