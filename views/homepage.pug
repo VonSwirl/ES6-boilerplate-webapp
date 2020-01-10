@@ -1,7 +1,63 @@
 extends layout.pug
 block content
   body
-    h1 ES6 Boilerplate Homepage
-    hr
+    // Navigation
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.fixed-top
+      .container
+        a.navbar-brand(href='#') Start Bootstrap
+        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarResponsive.collapse.navbar-collapse
+          ul.navbar-nav.ml-auto
+            li.nav-item.active
+              a.nav-link(href='#')
+                | Home
+                span.sr-only (current)
+            li.nav-item
+              a.nav-link(href='#') About
+            li.nav-item
+              a.nav-link(href='#') Services
+            li.nav-item
+              a.nav-link(href='#') Contact
+    // Page Content
+    .container
+      .row.align-items-center.my-5
+        .col-lg-7
+          img.img-fluid.rounded.mb-4.mb-lg-0(src='http://placehold.it/900x400', alt='')
+        .col-lg-5
+          h1.font-weight-light Business Name or Tagline
+          p
+            | This is a template that is great for small businesses. It doesn't have too much fancy flare to it, but it makes a great use of the standard Bootstrap core components. Feel free to use this template for any project you want!
+          a.btn.btn-primary(href='#') Call to Action!
+
+        .card.text-white.bg-secondary.my-5.py-4.text-center
+          .card-body
+            p.text-white.m-0
+              | This call to action card is a great place to showcase some important information or display a clever tagline!
+        .row
+          .col-md-4.mb-5
+            .card.h-100
+              .card-body
+                h2.card-title Card One
+                p.card-text
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.
+              .card-footer
+                a.btn.btn-primary.btn-sm(href='#') More Info
+          .col-md-4.mb-5
+            .card.h-100
+              .card-body
+                h2.card-title Card Two
+                p.card-text
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex natus at dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi labore.
+              .card-footer
+                a.btn.btn-primary.btn-sm(href='#') More Info
+          .col-md-4.mb-5
+            .card.h-100
+              .card-body
+                h2.card-title Card Three
+                p.card-text
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.
+              .card-footer
+                a.btn.btn-primary.btn-sm(href='#') More Info
   block foot
     include footer
