@@ -52,6 +52,6 @@
   },
   "optionalDependencies": {
     "fsevents": "^2.1.2",
-    "acorn": "^7.1.0"
+    "acorn": "^7.1.1"
   }
 }
